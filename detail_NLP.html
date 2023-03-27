@@ -57,23 +57,25 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-7">
-                <h1>Affordable Connectivity Program (ACP) Map</h1>
-                <p class="text-muted mb-5">Mapping of Affordable Connectivity Program Enrollment by zip code and investigation into enrollment disparities</p>
+                <h1>Natural Language Processing Survey Assessment</h1>
+                <p class="text-muted mb-5">Using neural networks with Tensorflow to assess the wording of survey questions</p>
             </div>
           </div>
           <div class="row mb-5">
-              <div class="col-lg-7"><a class="glightbox product-view" href="img\ACP_Map.JPG" data-gallery="gallery" data-glightbox="ACP Map"><img class="img-fluid mb-4" src="img/ACP_Map.JPG" alt="..."></a><a class="glightbox product-view" href="img\ACP_Program.JPG" data-gallery="gallery" data-glightbox="ACP Map Program"><img class="img-fluid mb-4" src="img\ACP_Program.JPG" alt="..."></a></div>
+              <div class="col-lg-7"><a class="glightbox product-view" href="img\NLP_image1.JPG" data-gallery="gallery" data-glightbox="Questionnaire"><img class="img-fluid mb-4" src="img/NLP_image1.JPG" alt="..."></a><a class="glightbox product-view" href="img\NLP_Padding.JPG" data-gallery="gallery" data-glightbox="NLP Pre-Processing"><img class="img-fluid mb-4" src="img\NLP_Padding.JPG" alt="..."></a><a class="glightbox product-view" href="img\Basic_NLP_Model.JPG" data-gallery="gallery" data-glightbox="NLP Base Model"><img class="img-fluid mb-4" src="img\Basic_NLP_Model.JPG" alt="..."></div>
               
               <div class="col-lg-5 position-sticky">
-                  <h2>An interactive map that delivers insight on ACP enrollment disparities</h2>
-                  <p class="text-muted">I created a map that allows users to investigate the percentage of ACP enrollment participation by ZIP code, and is updated when new data is made available. The ACP is a Federal Communications Commission (FCC) program that alleviates the cost burden of essential broadband connection and internet-connected devices for low income households.</p>
+                  <h2>Leveraging the power of natural language processing and neural networks to flag unclear survey questions</h2>
+                  <p class="text-muted">I created a neural network model that allows me to quickly review survey questions to assess if questions are well worded or need adjustment. Through this model, the time required for our team to go over surveys can be cut down as there's only a need to go over flagged questions.</p>
 
                   <h2>Process</h2>
-                  <p class="text-muted">The first photo shows the interactive map of Affordable Connectivity Program enrollment by zip code. While the government's data releases include information on the number of people who enroll each month, it does not include enrollment as a function of eligible people. This map bridges that gap and provides valuable insight. By showing enrollment as a percentage of eligible persons, practitioners can target their efforts in areas with where the enrollment, as a function of eligible people, is low.</p>
+                  <p class="text-muted">The first photo shows a survey we created to collect information for the Digital Navigator program - a program that allows us to increase the digital literacy of clients. As a multi-team iniative, there were many players contributing questions and it was my job to review questions and make suggestions. To improve this process, I created a neural network model that would read these new questions and highlight questions that may need more work.</p>
 
-                  <p class="text-muted">The second photo shows the wrap-around program I wrote to clean and aggregate the ACP data that will be used in the map.</p>
-
-                  <div class="p-4 bg-white mb-5">
+                  <p class="text-muted">The second photo shows the pre-processing tasks of tokenizing and padding the training and test data. This is necessary to transform string data to the eventual numeric sequences that will be fed into the keras model. In the third photo,</p>
+                  
+                  <p class="text-muted">The third photo shows the basic keras model that was used to read the sequences, including the number of neurons and the loss function. Once compiled, we could train and test this model using our training and test data.</p>
+                  
+                <div class="p-4 bg-white mb-5">
                       <ul class="list-unstyled mb-0">
                       </ul>
                   </div>
@@ -92,9 +94,9 @@
                       <div class="listing-item ps-0">
                           <div class="position-relative">
                               <ul class="list-inline listing-tags m-0">
-                                  <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail_GG_Final.html">ArcGIS</a></li>
-                              </ul><a class="reset-anchor d-block listing-img-holder" href="detail_GG_Final.html">
-                                  <img class="img-fluid rounded-lg" src="img\GG_MorrisonProperty.jpg" alt="Gullah/Geechee Land Ownership" />
+                                  <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail_UNHP_Final.html">Publications</a></li>
+                              </ul><a class="reset-anchor d-block listing-img-holder" href="detail_UNHP_Final.html">
+                                  <img class="img-fluid rounded-lg" src="img\UNHP_Image1.JPG" alt="UNHP Paper Cover" />
                                   <p class="mb-0 text-primary small d-flex align-items-center listing-btn">
                                       <span>Look inside</span>
                                       <svg class="svg-icon text-primary svg-icon-sm ms-1">
@@ -104,10 +106,10 @@
                               </a>
                           </div>
                           <div class="py-3">
-                              <a class="reset-anchor" href="detail_GG_Final.html">
-                                  <h2 class="h5 listing-item-heading">Gullah/Geechee Land Ownership</h2>
+                              <a class="reset-anchor" href="detail_UNHP_Final.html">
+                                  <h2 class="h5 listing-item-heading">Gambling with Homes, or Investing in Communities</h2>
                               </a>
-                              <p class="text-sm mb-0 listing-item-description">I visualized Gullah/Geechee lands and how the boundaries of their land have changed over time. Through these ArcGIS maps, I depicted the land as it once was, showed it in a contemporary context, and the land that exists after boundaries shifted</p>
+                              <p class="text-sm mb-0 listing-item-description">When NYC landlords use their buildings as a piggy bank, quickly racking up debt, we found statistical significant evidence that building have higher violations and evictions, especially in communities of color.</p>
                           </div>
                       </div>
                   </div>
@@ -138,9 +140,9 @@
                       <div class="listing-item ps-0">
                           <div class="position-relative">
                               <ul class="list-inline listing-tags m-0">
-                                  <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail_LA_Smallbiz.html">Analysis</a></li>
-                              </ul><a class="reset-anchor d-block listing-img-holder" href="detail_LA_Smallbiz.html">
-                                  <img class="img-fluid rounded-lg" src="img\LA_Round_3_Applicants_City_Image1.jpg" alt="COVID-19 Small Business Grant Program - Los Angeles" />
+                                  <li class="list-inline-item"><a class="reset-anchor fw-normal text-gray text-sm" href="detail_Coachella_Final.html">Publications</a></li>
+                              </ul><a class="reset-anchor d-block listing-img-holder" href="detail_Coachella_Final.html">
+                                  <img class="img-fluid rounded-lg" src="img\FromtheGroundup_Cover_Image1.JPG" alt="From the Ground Up" />
                                   <p class="mb-0 text-primary small d-flex align-items-center listing-btn">
                                       <span>Look inside</span>
                                       <svg class="svg-icon text-primary svg-icon-sm ms-1">
@@ -150,10 +152,10 @@
                               </a>
                           </div>
                           <div class="py-3">
-                              <a class="reset-anchor" href="detail_LA_Smallbiz.html">
-                                  <h2 class="h5 listing-item-heading">COVID-19 Small Business Grant Program - Los Angeles</h2>
+                              <a class="reset-anchor" href="detail_Coachella_Final.html">
+                                  <h2 class="h5 listing-item-heading">From the Ground Up</h2>
                               </a>
-                              <p class="text-sm mb-0 listing-item-description">During the COVID-19 pandemic, LISC National and local offices receives millions of dollars to help small businesses across the nation. In Los Angeles County, I designed the small business intake form that would allow small businesses to apply for a grant. Then, I created the protocol and selected businesses to receive small business grants while imbuing equity in the selection process. The system I devised helped disburse over $100 million in small business grants to LA county</p>
+                              <p class="text-sm mb-0 listing-item-description">This report uses quantitative analyses to investigate the impact of affordable housing investment on local mortgage values, and qualitative analyses reveal how those investments, combined with intentional investment in civic and physical infrastructure, led to local stability and revitalization, the growth of a middle class, and even changes in political representation</p>
                           </div>
                       </div>
                   </div>
