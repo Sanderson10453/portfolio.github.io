@@ -57,34 +57,39 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-7">
-                <h1>Flood Segmentation Model with Harmonized Land Satellite (HLS)</h1>
-                <p class="text-muted mb-5">Using HLS imagery in a flood segmentation model to understand areas of Jacksonville prone to flooding.</p>
+                <h1>LiDAR Imagery for Unmarked Grave Detection</h1>
+                <p class="text-muted mb-5">Creating an open source application that allows groups to detect unmarked gravesites, through the use of Light Detection and Ranging (LiDAR) data.</p>
             </div>
           </div>
           <div class="row mb-5">
               <div class="col-lg-7"><a class="glightbox product-view" href="img\NLP_image1.JPG" data-gallery="gallery" data-glightbox="Questionnaire"><img class="img-fluid mb-4" src="img/NLP_image1.JPG" alt="..."></a><a class="glightbox product-view" href="img\NLP_Padding.JPG" data-gallery="gallery" data-glightbox="NLP Pre-Processing"><img class="img-fluid mb-4" src="img\NLP_Padding.JPG" alt="..."></a><a class="glightbox product-view" href="img\Basic_NLP_Model.JPG" data-gallery="gallery" data-glightbox="NLP Base Model"><img class="img-fluid mb-4" src="img\Basic_NLP_Model.JPG" alt="..."></div>
               
               <div class="col-lg-5 position-sticky">
-                  <h2>Leveraging satellite imagery to highlight areas of Jacksonville prone to rain induced flooding</h2>
-                  <p class="text-muted">According to the research by FSU, Jacksonville should expect a 22% increase in extreme precipitation events under a 3.6 degree F climate warming scenario.
-                                        Using Harmonized Land Satellite (HLS) and flood segmentation modeling, we can predict areas that flood and areas that stay dry during rain-induced flood.
-                                        The Harmonized Land Satellite is a project from NASA that aims to produce a seamless surface reflectance record. Users can access these satellite images from NASA.
+                  <h2>Through the use of aerial LiDAR, this model would allow people to investigate large swaths of land to help improve the speed at which unmarked gravesites are identified</h2>
+                  <p class="text-muted">Finding unmarked gravesites typically relies on ground penetrating radar, direct knowledge, or noticing soft ground underfoot.
+                    While accurate, these methods are not always feasible at scale. This model is designed as an initial sweep — to be followed up by ground penetrating radar or group surveys — of areas suspected of containing unmarked gravesites.
+                    The current model has a focus on Florida, with plans to expand as the project grows.
                   </p>
 
-                  <h2>Process</h2>
-                  <p class="text-muted">To begin with, HLS images were downloaded the terminal. The HLS download can be run as a shell command with arguments that can specify
-                                        the amount of cloud cover, date ranges, and spatial tiles to download. This can be see in the first photo; meanwhile, the second photo shows
-                                        what a downloaded HLS image looks like.
+                  <h2>How It Works</h2>
+                  <p class="text-muted">The model builds an index used to power a <b>Red-Amber-Green (RAG)</b> prioritization system, classifying areas by their likelihood of containing unmarked graves.
                   </p>
 
-                  <p class="text-muted">Once downloaded, a transformer model from NASA-IBM was adaptated for flood segmentation in Jacksonville — some code snippets are show in the third photo. 
-                                        After feeding these HLS images into the model, we can see how the model views the various bands in the fourth photo.
+                  <p class="text-muted"><b>Historical Relevance:</b> The model accounts for proximity to places of worship and cultural landmarks, using data from the Florida Master Site File (FMSF).
+                                        Sites within a quarter mile of a religious site receive the highest weighting, with those within a half mile receiving the next level.
+                  </p>
+
+                  <p class="text-muted"><b>Absolute Elevation Difference:</b> Elevation data from LiDAR .las files is used to identify areas (approximately 4 feet in size) 
+                                        that sit noticeably lower than their surroundings — a potential indicator of a grave depression. 
+                                        The model filters out noise from the LiDAR data before flagging these areas.
                   </p>
                   
-                  <p class="text-muted"> Once run, the model will output an image that highlights areas where it "sees" flood waters — this can be seen in the fifth photo. 
-                                          To highlight areas that we believe are prone to flash flooding, we compare flash flood days to dry days in Jacksonville. We can then
-                                          compare areas that tend to be flooded on flash flood days, yet are labeled as dry land by the model on non-flood days. A comparison of this
-                                          can be seen in the sixth image.  
+                  <p class="text-muted"> <b>Topological Classification:</b> The model analyzes terrain topology, looking for concave areas (which may indicate subsidence from a grave)
+                                          and slightly sloped areas (which could suggest clusters of graves). Tolerances are calibrated for Florida's characteristically flat terrain.
+                  </p>
+
+                  <p class="text-muted"> <b>Output:</b> The model produces a shapefile of Red (high likelihood) and Amber (probable likelihood) areas, 
+                                                  along with a text file of X-Y coordinates for further on-the-ground investigation.
                   </p>
                   
                 <div class="p-4 bg-white mb-5">
@@ -181,9 +186,7 @@
               <div class="row gy-4">
                 <div class="col-lg-4">
                   <h2 class="h4 text-white mb-4">About me</h2>
-                  <p class="text-sm">Experienced data analyst who uses my analytic skills and curiosity to ensure everyone has the opportunity to live a high-quality life.
-                                      To do so, I use the following programs and languages: Python, SQL, DataBricks, Julia, Stata, ArcGIS, Qualtrics, and NVivo.
-                                      Master of Public Health from Brown University.</p>
+                  <p class="text-sm">Experienced data analyst who uses my analytic skills and curiosity to ensure everyone has the opportunity to live a high-quality life. To do so, I use the following programs and languages: Stata, ArcGIS, SQL, Python, ETL Flows, Qualtrics, and NVivo. Master of Public Health from Brown University.</p>
                   <ul class="list-unstyled text-sm mb-0 text-white">
                     <li class="mb-1"><a class="reset-anchor" href="#!"> <i class="fas text-muted me-2 fa-fw fa-globe-americas"></i>Brooklyn, NY.</a></li>
                     <li class="mb-1"><a class="reset-anchor" href="mailto:Spenseranderson2@gmail.com"> <i class="fas text-muted me-2 fa-fw fa-envelope"></i>Spenseranderson2@gmail.com</a></li>
